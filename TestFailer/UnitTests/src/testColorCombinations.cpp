@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../src/misaligned.h"
-#include "../src/weatherReportStub.h"
+#include "../../TestFailer/include/misaligned.h"
+#include "../../TestFailer/include/weatherReportStub.h"
 
 namespace TestColorCombinations
 {

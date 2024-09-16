@@ -21,21 +21,21 @@
     <ClCompile Include="src\tshirts.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\weatherReportStub.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\weatherReportStub.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\tshirts.h">
+    <ClInclude Include="include\IWeatherReport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\IWeatherReport.h">
+    <ClInclude Include="include\misaligned.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\misaligned.h">
+    <ClInclude Include="include\tshirts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\weatherReportStub.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

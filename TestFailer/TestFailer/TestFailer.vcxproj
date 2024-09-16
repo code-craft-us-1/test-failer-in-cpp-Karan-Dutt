@@ -160,12 +160,12 @@
     <ClCompile Include="src\misaligned.cpp" />
     <ClCompile Include="src\tshirts.cpp" />
     <ClCompile Include="src\weatherReportStub.cpp" />
-    <ClCompile Include="src\weatherReportStub.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\misaligned.h" />
-    <ClInclude Include="src\tshirts.h" />
-    <ClInclude Include="src\IWeatherReport.h" />
+    <ClInclude Include="include\IWeatherReport.h" />
+    <ClInclude Include="include\misaligned.h" />
+    <ClInclude Include="include\tshirts.h" />
+    <ClInclude Include="include\weatherReportStub.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

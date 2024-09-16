@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/tshirts.h"
+#include "../../TestFailer/include/tshirts.h"
 
 namespace TestTShirtSizes
 {

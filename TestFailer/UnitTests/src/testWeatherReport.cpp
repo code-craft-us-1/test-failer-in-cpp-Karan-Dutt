@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/weatherReportStub.h"
+#include "../../TestFailer/include/weatherReportStub.h"
 
 namespace TestWeatherReport
 {
