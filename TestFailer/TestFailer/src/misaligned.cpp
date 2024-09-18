@@ -3,19 +3,20 @@
 
 namespace misaligned
 {
-    int computeColorCombination(int i, int j)
+    constexpr auto MAX_NUMBER_OF_COLORS = 5;;
+    int computeColorCombination(int majorColorIndex, int minorColorIndex)
     {
-        return i * 5 + j;
+        return majorColorIndex * 5 + minorColorIndex;
     }
     std::map<int, std::pair<std::string, std::string>> computeColorMap() {
         const char* majorColor[] = { "White", "Red", "Black", "Yellow", "Violet" };
         const char* minorColor[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
         std::map<int, std::pair<std::string, std::string>> colorCombination;
-        int i = 0, j = 0;
-        for (i = 0; i < 5; i++) {
-            for (j = 0; j < 5; j++) 
+        int majorColorIndex = 0, minorColorIndex = 0;
+        for (majorColorIndex = 0; majorColorIndex < MAX_NUMBER_OF_COLORS; majorColorIndex++) {
+            for (minorColorIndex = 0; minorColorIndex < MAX_NUMBER_OF_COLORS; minorColorIndex++) 
             {
-                colorCombination[computeColorCombination(i, j)] = { majorColor[i], minorColor[j] };
+                colorCombination[computeColorCombination(majorColorIndex, minorColorIndex)] = { majorColor[majorColorIndex], minorColor[minorColorIndex] };
             }
         }
         return colorCombination;

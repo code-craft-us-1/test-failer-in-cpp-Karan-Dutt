@@ -17,42 +17,32 @@ namespace WeatherSpace {
 
     class TESTFAILER_API SensorStub : public IWeatherSensor {
 
+
     public:
+        SensorStub(int humidity, int precipitation, int temperatureInC, int windSpeed) :
+        m_humidity(humidity), m_precipitation(precipitation), m_temperatureInC(temperatureInC), m_windSpeedKMPH(windSpeed)
+        {
+        }
         int Humidity() const override {
-            return 72;
+            return m_humidity;
         }
 
         int Precipitation() const override {
-            return 70;
+            return m_precipitation;
         }
 
         double TemperatureInC() const override {
-            return 26;
+            return m_temperatureInC;
         }
 
         int WindSpeedKMPH() const override {
-            return 52;
+            return m_windSpeedKMPH;
         }
-    };
-
-    class TESTFAILER_API FaultySensorStub : public IWeatherSensor {
-
-    public:
-        int Humidity() const override {
-            return 72;
-        }
-
-        int Precipitation() const override {
-            return 65;
-        }
-
-        double TemperatureInC() const override {
-            return 26;
-        }
-
-        int WindSpeedKMPH() const override {
-            return 49;
-        }
+    private:
+        int m_humidity = 0;
+        int m_precipitation = 0;
+        int m_temperatureInC = 0;
+        int m_windSpeedKMPH = 0;
     };
 
     // This is a function to predict the weather, based on readings
