@@ -30,6 +30,6 @@ namespace TestWeatherReport
     
         // The test should fail because the function incorrectly reports "Sunny day"
         // instead of recognizing stormy conditions with heavy rain.
-        EXPECT_EQ(report, "Alert, Stormy with heavy rain");
+        EXPECT_EQ(report, "Alert, Heavy rain");
     }
 }
