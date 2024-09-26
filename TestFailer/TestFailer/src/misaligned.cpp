@@ -4,7 +4,7 @@
 namespace misaligned
 {
     constexpr auto MAX_NUMBER_OF_COLORS = 5;;
-    int computeColorCombination(int majorColorIndex, int minorColorIndex)
+    int getZeroBasedColorCombinationIndex(int majorColorIndex, int minorColorIndex)
     {
         return majorColorIndex * 5 + minorColorIndex;
     }
@@ -16,7 +16,7 @@ namespace misaligned
         for (majorColorIndex = 0; majorColorIndex < MAX_NUMBER_OF_COLORS; majorColorIndex++) {
             for (minorColorIndex = 0; minorColorIndex < MAX_NUMBER_OF_COLORS; minorColorIndex++) 
             {
-                colorCombination[computeColorCombination(majorColorIndex, minorColorIndex)] = { majorColor[majorColorIndex], minorColor[minorColorIndex] };
+                colorCombination[getZeroBasedColorCombinationIndex(majorColorIndex, minorColorIndex)] = { majorColor[majorColorIndex], minorColor[minorColorIndex] };
             }
         }
         return colorCombination;

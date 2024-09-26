@@ -15,7 +15,7 @@ namespace TestColorCombinations
         auto colorMap = misaligned::computeColorMap();
         constexpr auto majorColorIndex = 2;
         constexpr auto minorColorIndex = 3;
-        const auto key = misaligned::computeColorCombination(majorColorIndex, minorColorIndex); // Compute key for i = 2, j = 3
+        const auto key = misaligned::getZeroBasedColorCombinationIndex(majorColorIndex, minorColorIndex); // Compute key for i = 2, j = 3
         EXPECT_NE(colorMap.find(key), colorMap.end()); // Check if the key exists
         EXPECT_EQ(colorMap[key].first, "Black"); // Major color for i = 2 should be "Black"
         EXPECT_EQ(colorMap[key].second, "Brown"); // Minor color for j = 3 should be "Brown"
@@ -29,7 +29,7 @@ namespace TestColorCombinations
 
         for (int majorColorIndex = 0; majorColorIndex < 5; majorColorIndex++) {
             for (int minorColorIndex = 0; minorColorIndex < 5; minorColorIndex++) {
-                auto key = misaligned::computeColorCombination(majorColorIndex, minorColorIndex);
+                auto key = misaligned::getZeroBasedColorCombinationIndex(majorColorIndex, minorColorIndex);
                 EXPECT_NE(colorMap.find(key), colorMap.end()); // Key should exist
                 EXPECT_EQ(colorMap[key].first, majorColor[majorColorIndex]); // Major color should match
                 EXPECT_EQ(colorMap[key].second, minorColor[minorColorIndex]); // Minor color should match
